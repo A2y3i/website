@@ -1,0 +1,129 @@
+
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Index</title>
+
+    <style>
+      body {
+          font-family: 'Kanit', sans-serif;
+      }
+      .card-header {
+          background-color: #004e92;
+          color: white;
+      }
+      .card-body {
+          background-color: #f9f9f9;
+      }
+      .card-title {
+          color: #004e92;
+      }
+  </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-sm ps-3 pe-3">
+        <a class="navbar-brand" href="#">ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">หน้าหลัก</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ข้อมูลห้องสมุด
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="library.html">รู้จักห้องสมุด</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                บริการ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ebook_media_research.html">อีบุ้คและมัลติมีเดีย</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  บทความ 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="Interesting_information.html">นิตยสารที่น่าอ่าน  </a></li>
+                  <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
+                  <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>              
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="qa.html">ถาม ตอบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="contact.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- NAVBAR -->
+
+
+    <!-- หน้า Page -->
+    <section class="container py-5">
+      <h2 class="text-center mb-4 text-primary">💬 ถาม - ตอบ</h2>
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <div class="card shadow-lg border-0 rounded-3">
+                  <div class="card-body p-4">
+                      <div class="mb-3">
+                          <label for="question" class="form-label fw-bold">❓ คำถามของคุณ</label>
+                          <textarea class="form-control border-primary" id="question" rows="3" required></textarea>
+                      </div>
+                      <button id="submitQuestion" class="btn btn-primary w-100 rounded-pill">📩 ส่งคำถาม</button>
+                      <div class="mt-4">
+                          <h5 class="text-primary">🌟 คำถามที่พบบ่อย</h5>
+                          <ul id="faqList" class="list-group list-group-flush border rounded-3 shadow-sm">
+                              <li class="list-group-item">📅 ห้องสมุดเปิดให้บริการวันไหนบ้าง?</li>
+                              <li class="list-group-item">📚 สามารถยืมหนังสือได้กี่เล่ม?</li>
+                              <li class="list-group-item">⚠️ มีค่าปรับกรณีคืนหนังสือช้าหรือไม่?</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <script>
+  document.getElementById('submitQuestion').addEventListener('click', function() {
+      let question = document.getElementById('question').value.trim();
+      if (question === "") {
+          alert("⚠️ กรุณากรอกคำถามก่อนส่ง");
+          return;
+      }
+      let faqList = document.getElementById('faqList');
+      let newQuestion = document.createElement('li');
+      newQuestion.className = "list-group-item bg-light border rounded-3 shadow-sm";
+      newQuestion.innerHTML = `📝 ${question}`;
+      faqList.appendChild(newQuestion);
+      document.getElementById('question').value = "";
+  });
+  </script>
+  
+    <!-- หน้า Page -->
+     
+
+    <footer class="bg-dark text-white text-center py-4">
+      <p>&copy; 2025 A2y3i. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

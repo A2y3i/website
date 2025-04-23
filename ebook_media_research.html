@@ -1,0 +1,170 @@
+
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Index</title>
+
+    <style>
+      body {
+          font-family: 'Kanit', sans-serif;
+      }
+      .card-header {
+          background-color: #004e92;
+          color: white;
+      }
+      .card-body {
+          background-color: #f9f9f9;
+      }
+      .card-title {
+          color: #004e92;
+      }
+  </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-sm ps-3 pe-3">
+        <a class="navbar-brand" href="#">ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">หน้าหลัก</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ข้อมูลห้องสมุด
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="library.html">รู้จักห้องสมุด</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                บริการ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ebook_media_research.html">อีบุ้คและมัลติมีเดีย</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  บทความ 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="Interesting_information.html">นิตยสารที่น่าอ่าน  </a></li>
+                  <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
+                  <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>              
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="qa.html">ถาม ตอบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="contact.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- NAVBAR -->
+
+
+    <!-- หน้า Page -->
+    <div class="container my-5">
+      <h2>ระบบค้นหาข้อมูลห้องสมุด</h2>
+      
+      <!-- Search Bar -->
+      <div class="mb-3">
+          <input type="text" class="form-control" id="searchInput" placeholder="ค้นหาข้อมูล..." onkeyup="searchData()">
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Search Results will be displayed here -->
+      </div>
+  </div>
+
+  <script>
+      // ตัวอย่างข้อมูล (ฐานข้อมูลจำลองใน JavaScript) พร้อมรูปภาพ
+      const libraryData = [
+          {
+              id: 1,
+              title: "ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์",
+              description: "กรุงเทพมหานครมีนโยบายด้ายการพัฒนาคุณภาพชีวิตเด็กเยาวชนในการส่งเสริมเรื่องการรักการอ่าน...",
+              imageUrl: "image/image_11.jpg"
+          },
+          {
+              id: 2,
+              title: "ห้องสมุดเพื่อการเรียนรู้",
+              description: "ห้องสมุดเพื่อการเรียนรู้ได้รับการแต่งให้เกิดภาพลักษณ์ที่ดี มีการนำเอาเทคโนโลยีที่ทันสมัย...",
+              imageUrl: "image/image_11.jpg"
+          },
+          {
+              id: 3,
+              title: "การยืม-คืนหนังสือ",
+              description: "สิทธิพิเศษของผู้เป็นสมาชิกคือการได้ยืมหนังสือครั้งละ 2 เล่ม ภายในระยะเวลา 7 วัน...",
+              imageUrl: "image/image_11.jpg"
+          },
+          {
+              id: 4,
+              title: "การสมัครสมาชิกห้องสมุด",
+              description: "ข้อมูลการสมัครสมาชิกห้องสมุด มีค่าสมัคร 5 บาท/ปี สำหรับอายุไม่เกิน 15 ปี และ 10 บาท/ปี สำหรับอายุ 15 ปีขึ้นไป.",
+              imageUrl: "image/image_11.jpg"
+          },
+          {
+              id: 5,
+              title: "ระเบียบวิธีใช้ห้องสมุด",
+              description: "ผู้ใช้ห้องสมุดต้องแต่งกายสุภาพ รักษากิริยาอาการให้สำรวมและสงบ งดใช้เสียงและควรปิดเครื่องมือสื่อสารทุกชนิด.",
+              imageUrl: "image/image_11.jpg"
+          }
+      
+        ];
+
+      // ฟังก์ชันสำหรับค้นหาข้อมูล
+      function searchData() {
+          let input = document.getElementById('searchInput').value.toLowerCase();
+          let resultsContainer = document.getElementById('results');
+          resultsContainer.innerHTML = '';  // Clear previous results
+
+          // ค้นหาข้อมูลที่ตรงกับคำค้น
+          const filteredData = libraryData.filter(item => 
+              item.title.toLowerCase().includes(input) || item.description.toLowerCase().includes(input)
+          );
+
+          // แสดงผลการค้นหา
+          if (filteredData.length === 0) {
+              resultsContainer.innerHTML = '<div class="col-12"><p>ไม่พบข้อมูลที่ค้นหา</p></div>';
+          } else {
+              filteredData.forEach(item => {
+                  const card = document.createElement('div');
+                  card.classList.add('col');
+                  card.innerHTML = `
+                      <div class="card h-100">
+                          <img src="${item.imageUrl}" class="card-img-top" alt="${item.title}">
+                          <div class="card-body">
+                              <h5 class="card-title">${item.title}</h5>
+                              <p class="card-text">${item.description}</p>
+                              <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
+                          </div>
+                      </div>
+                  `;
+                  resultsContainer.appendChild(card);
+              });
+          }
+      }
+  </script>
+    
+    <!-- หน้า Page -->
+    <footer class="bg-dark text-white text-center py-4">
+      <p>&copy; 2025 A2y3i. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
