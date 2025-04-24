@@ -1,0 +1,126 @@
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายละเอียดข้อมูล</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+      color: #333;
+    }
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+      border: 1px solid #d0e8f2;
+      background-color: #ffffff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-img-top {
+      height: 400px;
+      object-fit: cover;
+    }
+    .card-title {
+      color: #0074b7;
+      font-weight: 600;
+    }
+    .card-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .btn-secondary {
+      background-color: #0074b7;
+      border: none;
+    }
+    .btn-secondary:hover {
+      background-color: #005d91;
+    }
+    .card-body {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body class="container my-5">
+
+  <div id="detail" class="row justify-content-center"></div>
+
+  <script>
+    const libraryData = [
+      {
+        id: 1,
+        title: "ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์",
+        description: `กรุงเทพมหานครมีนโยบายด้านการพัฒนาคุณภาพชีวิตเด็ก เยาวชน ในการส่งเสริมเรื่องการรักการอ่าน และการเรียนรู้ตลอดชีวิตแก่ประชาชนในเขตกรุงเทพมหานคร 
+        ภายใต้ยุทธศาสตร์ที่ 2 ของกรุงเทพมหานคร เพื่อพัฒนาศักยภาพเมืองหลวงของประเทศไทย ก้าวไปสู่การแข่งขันด้านการศึกษาเรียนรู้ทันต่อโลกและยุคสมัย 
+        รวมถึงการแข่งขันทางด้านเศรษฐกิจ โดยส่งเสริมแหล่งการเรียนรู้ให้มีประสิทธิภาพ จึงจัดให้มีโครงการสร้างห้องสมุดเพื่อการเรียนรู้ ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์`,
+        imageUrl: "https://i.postimg.cc/FzRVG3wg/DSC01102.png"
+      },
+      {
+        id: 2,
+        title: "ห้องสมุดเพื่อการเรียนรู้",
+        description: `ห้องสมุดเพื่อการเรียนรู้ได้รับการออกแบบให้มีภาพลักษณ์ที่ทันสมัย
+        มีการนำเทคโนโลยีเข้ามาใช้งานแบบครบวงจร เพื่อให้บริการประชาชนได้อย่างรวดเร็ว
+        สร้างแรงจูงใจในการรักการอ่าน และให้บริการแบบ One-Stop Service แก่สมาชิกทุกวัย`,
+        imageUrl: "https://i.postimg.cc/d183xj7P/3-B618761-E758-4-C9-E-BEBA-737268-C3.png"
+      },
+      {
+        id: 3,
+        title: "การยืม-คืนหนังสือ",
+        description: `สมาชิกสามารถยืมหนังสือได้ครั้งละ 2 เล่ม เป็นเวลา 7 วัน
+        หากคืนล่าช้าจะเสียค่าปรับวันละ 1 บาทต่อเล่ม
+        ในกรณีที่หนังสือชำรุด ต้องชำระตามราคาท้องตลาดหรือหาซื้อเล่มใหม่มาทดแทน`,
+        imageUrl: "https://i.postimg.cc/nh0bkRn9/3-B618761-E758-4-C9-E-BEBA-737268-C3-1.png"
+      },
+      {
+        id: 4,
+        title: "การสมัครสมาชิกห้องสมุด",
+        description: `ค่าสมัครสมาชิกแบ่งตามอายุ:
+        - อายุไม่เกิน 15 ปี: 5 บาท / ปี
+        - อายุ 15 ปีขึ้นไป: 10 บาท / ปี`,
+        imageUrl: "https://i.postimg.cc/59pSQjmV/Chat-GPT-Image-25-2568-01-37-41.png"
+      },
+      {
+        id: 5,
+        title: "ระเบียบวิธีใช้ห้องสมุด",
+        description: `1. ผู้ใช้ห้องสมุดต้องแต่งกายสุภาพเรียบร้อย<br>
+        2. รักษากิริยาอาการให้สำรวมและสงบ<br>
+        3. งดใช้เสียง และควรปิดเครื่องมือสื่อสารทุกชนิด<br>
+        4. ห้ามนำอาหารและเครื่องดื่มเข้ามา หรือเคี้ยวภายในห้องสมุด<br>
+        5. เมื่ออ่านหนังสือเสร็จแล้ว ให้วางไว้ที่จุดพักหนังสือ<br>
+        6. หนังสือพิมพ์ให้นำกลับไปวางที่ชั้นวารสารตามชื่อวารสาร<br>
+        7. ช่วยกันรักษาทรัพยากรของห้องสมุด ห้ามขีดเขียนหรือทำลายหนังสือและวัสดุต่างๆ`,
+        imageUrl: "https://i.postimg.cc/3xDvJwRY/Chat-GPT-Image-25-2568-01-42-14.png"
+      }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+    const data = libraryData.find(item => item.id === id);
+
+    const detailContainer = document.getElementById("detail");
+
+    if (data) {
+      detailContainer.innerHTML = `
+        <div class="col-md-10 col-lg-8">
+          <div class="card mb-4">
+            <img src="${data.imageUrl}" class="card-img-top" alt="${data.title}">
+            <div class="card-body">
+              <h3 class="card-title mb-3">${data.title}</h3>
+              <p class="card-text">${data.description}</p>
+              <a href="index.html" class="btn btn-secondary mt-3">ย้อนกลับ</a>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      detailContainer.innerHTML = "<p class='text-center text-danger'>ไม่พบข้อมูล</p>";
+    }
+  </script>
+
+</body>
+</html>
