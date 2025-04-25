@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ติดต่อผู้พัฒนา</title>
+
+  <!-- Bootstrap + Kanit + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #ffffff; /* เปลี่ยนพื้นหลังเป็นสีขาว */
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.03); /* สีพื้นจางๆ */
+      border: none;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      color: #0077aa;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+
+    .contact-info i {
+      color: #0077aa;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #0077aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .developer-photo-box {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      border: 2px dashed #00bcd4;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.5rem auto; /* ชิดขึ้นมา */
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .card .row {
+        gap: 0; /* ลดช่องว่างระหว่างคอลัมน์เมื่อจอกว้าง */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-sm ps-3 pe-3">
+      <a class="navbar-brand" href="#">ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">หน้าหลัก</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ข้อมูลห้องสมุด</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="library.html">รู้จักห้องสมุด</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">บริการ</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="ebook_media_research.html">อีบุ้คและมัลติมีเดีย</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">บทความ</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Interesting_information.html">นิตยสารที่น่าอ่าน</a></li>
+              <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
+              <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="qa.html">ถาม ตอบ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+          <li class="nav-item"><a class="nav-link active" href="developer_contact.html">ติดต่อผู้พัฒนา</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card p-4">
+          
+          <!-- 🔹 ผู้พัฒนาคนที่ 1 -->
+          <div class="row align-items-center mb-5">
+            <!-- คอลัมน์ซ้าย -->
+            <div class="col-md-7">
+              <h2 class="text-center text-md-start text-info">ติดต่อผู้พัฒนา</h2>
+              <div class="contact-info mt-4">
+                <p><i class="bi bi-person-fill"></i> <strong>ชื่อผู้พัฒนา:</strong>สุชาติ โลลุวัฒนา</p>
+                <p><i class="bi bi-envelope-fill"></i> <strong>อีเมล:</strong> <a href="mailto:your-email@example.com">suchat.laa@tsn.thai-tech.ac.th</a></p>
+                <p><i class="bi bi-facebook"></i> <strong>Facebook:</strong> <a href="https://facebook.com/yourpage" target="_blank">facebook.com</a></p>
+                <p><i class="bi bi-telephone-fill"></i> <strong>เบอร์โทร:</strong> 094-887-3554</p>
+              </div>
+            </div>
+  
+            <!-- คอลัมน์ขวา -->
+            <div class="col-md-5 text-center">
+                <div class="developer-photo-box overflow-hidden">
+                  <img src="https://i.postimg.cc/pXbLdw75/IMG-20241126-140606-jpg.png" 
+                       alt="รูปผู้พัฒนา" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <p class="mt-2 small text-secondary">* รูปตัวอย่างผู้พัฒนา</p>
+              </div>
+            </div>
+  
+          <!-- 🔹 ผู้พัฒนาคนที่ 2 -->
+          <div class="row align-items-center">
+            <!-- คอลัมน์ซ้าย -->
+            <div class="col-md-7">
+              <h2 class="text-center text-md-start text-info">ติดต่อผู้พัฒนาร่วม</h2>
+              <div class="contact-info mt-4">
+                <p><i class="bi bi-person-fill"></i> <strong>ชื่อผู้พัฒนา:</strong> อภิวิชญ์ ทันยศ</p>
+                <p><i class="bi bi-envelope-fill"></i> <strong>อีเมล:</strong> <a href="mailto:nut-email@example.com">nut-email@example.com</a></p>
+                <p><i class="bi bi-facebook"></i> <strong>Facebook:</strong> <a href="https://facebook.com/nutpage" target="_blank">facebook.com/nutpage</a></p>
+                <p><i class="bi bi-telephone-fill"></i> <strong>เบอร์โทร:</strong> 098-xxx-xxxx</p>
+              </div>
+            </div>
+  
+            <!-- คอลัมน์ขวา -->
+            <div class="col-md-5 text-center">
+                <div class="developer-photo-box overflow-hidden">
+                  <img src="https://i.postimg.cc/zDhMdPjq/IMG-20241126-14440606.png" 
+                       alt="รูปผู้พัฒนา" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+              <p class="mt-2 small text-secondary">* ใส่รูปผู้พัฒนาร่วม</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 A2y3i. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
