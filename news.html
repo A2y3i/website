@@ -8,7 +8,7 @@
   <title>ข่าวประชาสัมพันธ์ห้องสมุด</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
     body { font-family: 'Kanit', sans-serif; background-color: #f0f2f5; }
     header { background-color: #003366; color: white; padding: 15px; text-align: center; font-size: 26px; font-weight: bold; }
     .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
@@ -23,6 +23,8 @@
   </style>
 </head>
 
+<body>
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-sm ps-3 pe-3">
@@ -32,207 +34,194 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">หน้าหลัก</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">หน้าหลัก</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ข้อมูลห้องสมุด
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">ข้อมูลห้องสมุด</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="library.html">รู้จักห้องสมุด</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            บริการ
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">บริการ</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="ebook_media_research.html">อีบุ้คและมัลติมีเดีย</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              บทความ 
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">บทความ</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="Interesting_information.html">นิตยสารที่น่าอ่าน  </a></li>
-              <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
-              <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>              
+            <li><a class="dropdown-item" href="Interesting_information.html">ข่าวประชาสัมพันธ์ห้องสมุด</a></li>
+            <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
+            <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="qa.html">ถาม ตอบ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="contact.html">ติดต่อเรา</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="developer_contact.html">ติดต่อผู้พัฒนา</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="qa.html">ถาม ตอบ</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+        <li class="nav-item"><a class="nav-link" href="developer_contact.html">ติดต่อผู้พัฒนา</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- NAVBAR -->
 
-<body>
-
 <header>ข่าวประชาสัมพันธ์ห้องสมุด</header>
 
 <div class="container py-4">
   <div class="news-grid">
 
+    <!-- เริ่มรายการข่าวทั้งหมด -->
     <div class="news-card">
-      <a href="all_library_services.html?id=1">
-        <img src="https://i.postimg.cc/d0N5hytJ/Green-Watercolor-Simple-Blank-Backgr.png/400x300.png?text=สาระน่ารู้1" alt="สาระน่ารู้1">
+      <a href="all_news.html?id=1">
+        <img src="https://i.postimg.cc/SNM708Pn/close.png" alt="สาระน่ารู้1">
         <div class="news-content">
-          <div class="news-date">20 Apr, 2025</div>
-          <div class="news-title">วิธีรับมือแผ่นดินไหว ควรทำอย่างไร มีข้อห้ามอะไรบ้าง</div>
+          <div class="news-date">03 Apr, 2025</div>
+          <div class="news-title">ห้องสมุดปิดให้บริการ</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=2">
-        <img src="https://i.postimg.cc/HkkWwrCr/A4.png/400x300.png?text=สาระน่ารู้2" alt="สาระน่ารู้2">
+      <a href="all_news.html?id=2">
+        <img src="https://i.postimg.cc/3RPjWCf0/E-Book.png" alt="สาระน่ารู้2">
         <div class="news-content">
-          <div class="news-date">30 Mar, 2025</div>
-          <div class="news-title">เช็คปริมาณน้ำตาลที่ควรบริโภค</div>
+          <div class="news-date">22 Feb, 2025</div>
+          <div class="news-title">อีบุ๊กใหม่ 400 เล่มจุก ๆ จากกรุงเทพมหานคร</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=3">
-        <img src="https://i.postimg.cc/zBP7Dt1J/Green-White-Cute-Frog-Illustrative-Pr.png/400x300.png?text=สาระน่ารู้3" alt="สาระน่ารู้3">
+      <a href="all_news.html?id=3">
+        <img src="https://i.postimg.cc/8kfdr9SF/bookdelivery3.png" alt="สาระน่ารู้3">
         <div class="news-content">
-          <div class="news-date">16 Mar, 2025</div>
-          <div class="news-title">ออกกำลังกายแบบเดิน เป็นทางลัดไปสู่การผอมเพรียว</div>
+          <div class="news-date">26 Jan, 2025</div>
+          <div class="news-title">Book Delivery บริการยืมหนังสือระหว่างห้องสมุด</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=4">
-        <img src="https://i.postimg.cc/59GtMwDb/Green-Illustrative-Family-Day-Instag.png/400x300.png?text=สาระน่ารู้4" alt="สาระน่ารู้4">
+      <a href="all_news.html?id=4">
+        <img src="https://i.postimg.cc/DZtHrNw2/69-144.png" alt="สาระน่ารู้4">
         <div class="news-content">
-          <div class="news-date">09 Mar, 2025</div>
-          <div class="news-title">เริ่มอ่านตั้งแต่เล็ก ปลูกฝังนิสัยรักการอ่านให้ลูก</div>
+          <div class="news-date">02 Jul, 2025</div>
+          <div class="news-title">กิจกรรม Happy Greeting Card</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=5">
-        <img src="https://i.postimg.cc/d3b6M4bL/sara1368.png/400x300.png?text=สาระน่ารู้5" alt="สาระน่ารู้5">
+      <a href="all_news.html?id=5">
+        <img src="https://i.postimg.cc/y8d3M6Hr/481458661-617012281120787-191658.png" alt="สาระน่ารู้5">
         <div class="news-content">
-          <div class="news-date">02 Mar, 2025</div>
-          <div class="news-title">ทำความเข้าใจการกินยาก่อนและหลังอาหารให้ถูกวิธี</div>
+          <div class="news-date">02 Feb, 2025</div>
+          <div class="news-title">สัปดาห์หนังสือแห่งชาติครั้งที่ 53</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=6">
-        <img src="https://i.postimg.cc/13M4n4vz/Online-Safety-Presentationin-Colorf.png/400x300.png?text=สาระน่ารู้6" alt="สาระน่ารู้6">
+      <a href="all_news.html?id=6">
+        <img src="https://i.postimg.cc/JnfvwZQq/aa33.png" alt="สาระน่ารู้6">
         <div class="news-content">
-          <div class="news-date">23 Feb, 2025</div>
-          <div class="news-title">5 วิธีป้องกันข้อมูลปลอดภัย ก่อนส่งเอกสารออนไลน์5 วิธีป้องกันข้อมูลปลอดภัย ก่อนส่งเอกสารออนไลน์</div>
+          <div class="news-date">08 Jan, 2023</div>
+          <div class="news-title">ขอเชิญน้องๆหนูๆร่วมกิจกรรม "Children's day วันเด็กแห่งชาติ"</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=7">
-        <img src="https://i.postimg.cc/Kjz45b42/motor.png/400x300.png?text=สาระน่ารู้7" alt="สาระน่ารู้7">
+      <a href="all_news.html?id=7">
+        <img src="https://i.postimg.cc/mgYGRbp4/012.png" alt="สาระน่ารู้7">
         <div class="news-content">
-          <div class="news-date">16 Feb, 2025</div>
-          <div class="news-title">เรื่องควรรู้เกี่ยวกับหมวกกันน็อก
+          <div class="news-date">27 Sep, 2023</div>
+          <div class="news-title">ความปลอดภัยทางท้องถนน
           </div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=8">
-        <img src="https://i.postimg.cc/VL1BtGqL/480032753-1112435494265539-90246.png/400x300.png?text=สาระน่ารู้8" alt="สาระน่ารู้8">
+      <a href="all_news.html?id=8">
+        <img src="https://i.postimg.cc/g2X1kGMj/68-17.png" alt="สาระน่ารู้8">
         <div class="news-content">
-          <div class="news-date">15 Feb, 2025</div>
-          <div class="news-title">(PM 2.5) ในกรุงเทพมหานคร ประจำวันที่ 15 กุมภาพันธ์ 2568 เวลา 07:00 น.</div>
+          <div class="news-date">29 Mar, 2024</div>
+          <div class="news-title">พบเห็น ป้ายเถื่อน แจ้งเลย</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=9">
-        <img src="https://i.postimg.cc/CKQdh1Nf/Green-Playful-Dinosaurs-Kids-Birthda.png/400x300.png?text=สาระน่ารู้9" alt="สาระน่ารู้9">
+      <a href="all_news.html?id=9">
+        <img src="https://i.postimg.cc/qMQqsHdp/66-1.png" alt="สาระน่ารู้9">
         <div class="news-content">
-          <div class="news-date">14 Feb, 2025</div>
-          <div class="news-title">พื้นที่เล่นสร้างสรรค์สนามแห่งการเรียนรู้และเติบโตของเด็ก</div>
+          <div class="news-date">05 Jul, 2024</div>
+          <div class="news-title">นวนิยายจีนใหม่ พร้อมให้บริการแล้วจ้า</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=10">
-        <img src="https://i.postimg.cc/nL0vfBMK/Chat-GPT-Image-27-2568-00-57-03.png/400x300.png?text=สาระน่ารู้10" alt="สาระน่ารู้10">
+      <a href="all_news.html?id=10">
+        <img src="https://i.postimg.cc/WbryJsRH/PR1.png" alt="สาระน่ารู้10">
         <div class="news-content">
-          <div class="news-date">12 Feb, 2025</div>
-          <div class="news-title">5 วิธีดูแลสุขภาพจิตวัยทำงาน</div>
+          <div class="news-date">06 Oct, 2025</div>
+          <div class="news-title">ห้องสมุดเปลี่ยนเปลงเวลาให้บริการ</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=11">
-        <img src="https://i.postimg.cc/fyM9kvyg/pm2511268.png/400x300.png?text=สาระน่ารู้11" alt="สาระน่ารู้11">
+      <a href="all_news.html?id=11">
+        <img src="https://i.postimg.cc/L8SvGfqH/68-143.png" alt="สาระน่ารู้11">
         <div class="news-content">
-          <div class="news-date">11 Feb, 2025</div>
-          <div class="news-title">อัปเดตค่าฝุ่น PM 2.5 ทั่วประเทศ ข้อมูลจากดาวเทียมผ่านแอปพลิเคชัน #เช็คฝุ่น เวลา 08.00 น. วันที่ 11 ก.พ. 68</div>
-        </div>
-      </a>
-    </div>
-    
-    <div class="news-card">
-      <a href="all_library_services.html?id=12">
-        <img src="https://i.postimg.cc/L8n7XcJw/472166054-1486707338954378-10693.png/400x300.png?text=สาระน่ารู้12" alt="สาระน่ารู้12">
-        <div class="news-content">
-          <div class="news-date">19 Jan, 2025</div>
-          <div class="news-title">5 วิธี ป้องกันข้อมูลปลอดภัย ก่อนส่งเอกสารออนไลน์</div>
+          <div class="news-date">14 May, 2024</div>
+          <div class="news-title">เปิดรับสมัครคัดเลือกอาสาสมัครช่วยปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. 2567 เพิ่มเติม (ครั้งที่ 3)</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=13">
-        <img src="https://i.postimg.cc/RZ3NC04t/10-9.png/400x300.png?text=สาระน่ารู้13" alt="สาระน่ารู้13">
+      <a href="all_news.html?id=12">
+        <img src="https://i.postimg.cc/bw4hkp3D/68-166.png" alt="สาระน่ารู้12">
         <div class="news-content">
-          <div class="news-date">05 May, 2025</div>
-          <div class="news-title">ปวดหัวแบบไหน รีบไปหาหมอด่วน!</div>
+          <div class="news-date">21 May, 2024</div>
+          <div class="news-title">Fancy Bookmarks</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=14">
-        <img src="https://i.postimg.cc/d0nWwvFz/68-218.png/400x300.png?text=สาระน่ารู้14" alt="สาระน่ารู้14">
+      <a href="all_news.html?id=13">
+        <img src="https://i.postimg.cc/VkDHy8JG/open.png" alt="สาระน่ารู้13">
         <div class="news-content">
-          <div class="news-date">12 Jun, 2025</div>
-          <div class="news-title">3 อาการ..อึ๊..ไม่ออก ที่ต้องพบแพทย์</div>
+          <div class="news-date">09 Jan, 2025</div>
+          <div class="news-title">เปิดรับสมัครอาสาสมัครช่วยปฏิบัติราชการ</div>
         </div>
       </a>
     </div>
 
     <div class="news-card">
-      <a href="all_library_services.html?id=15">
-        <img src="https://i.postimg.cc/mrz6BJdj/learnanywhere-02.png/400x300.png?text=สาระน่ารู้3" alt="สาระน่ารู้15">
+      <a href="all_news.html?id=14">
+        <img src="https://i.postimg.cc/XXMhHcDw/Reallygreatsitepresents1.png" alt="สาระน่ารู้14">
         <div class="news-content">
-          <div class="news-date">27 Aug, 2023</div>
-          <div class="news-title">ไขปริศนาความจริงการสั่ง #ส้มหยุด!</div>
+          <div class="news-date">19 Dec, 2024</div>
+          <div class="news-title">แจ้งวันหยุดเทศกาลสิ้นปีและวันขึ้นปีใหม่</div>
         </div>
       </a>
     </div>
+
+    <div class="news-card">
+      <a href="all_news.html?id=15">
+        <img src="https://i.postimg.cc/HLk1qzBm/472211043-988161376691623-837035.png" alt="สาระน่ารู้15">
+        <div class="news-content">
+          <div class="news-date">04 Jan, 2025</div>
+          <div class="news-title">เทศกาลกรุงเทพกลางแปลง ปี 3</div>
+        </div>
+      </a>
+    </div>
+    <!-- จบรายการข่าวทั้งหมด -->
+
   </div>
 
   <div class="text-center">
