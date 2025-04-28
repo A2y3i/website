@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -47,64 +46,9 @@
     }
   </style>
 </head>
-<body>
+<body class="container my-5">
 
-  <!-- START: Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-sm ps-3 pe-3">
-      <a class="navbar-brand" href="#">ห้องสมุดและพิพิธภัณฑ์เสรีไทยอนุสรณ์</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">หน้าหลัก</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ข้อมูลห้องสมุด
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="library.html">รู้จักห้องสมุด</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              บริการ
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="ebook_media_research.html">อีบุ้คและมัลติมีเดีย</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              บทความ
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="Interesting_information.html">นิตยสารที่น่าอ่าน</a></li>
-              <li><a class="dropdown-item" href="#">แหล่งความรู้อื่นๆ</a></li>
-              <li><a class="dropdown-item" href="#">สารสนเทศขบวนการเสรีไทย</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="qa.html">ถาม ตอบ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">ติดต่อสอบถาม</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="developer_contact.html">ติดต่อผู้พัฒนา</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- END: Navbar -->
-
-  <div class="container my-5">
-    <div id="detail" class="row justify-content-center"></div>
-  </div>
+  <div id="detail" class="row justify-content-center"></div>
 
   <script>
     const libraryData = [
@@ -153,6 +97,7 @@
         imageUrl: "https://i.postimg.cc/3xDvJwRY/Chat-GPT-Image-25-2568-01-42-14.png"
       }
     ];
+
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
     const data = libraryData.find(item => item.id === id);
@@ -177,6 +122,5 @@
     }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
